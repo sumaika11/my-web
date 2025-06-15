@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/logo/logo (3).jpg" alt=""></a>
+
+
+      <div class="collapse navbar-collapse justify-content-lg-center" id="navbarNav">
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home</a>
+          </li>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+          Category  
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="origin.html"> Origins</a></li>
+              <li><a class="dropdown-item" href="tradition.html">Tradition</a></li>
+              <li><a class="dropdown-item" href="gallery.html"> Gallery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="neon-particles">
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+  <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+
+
+
+ <section>
+  <div class="container">
+    
+ 
+    <div class="block fade-in">
+      <img src="assets/images/tradition 2/eb26f1ca78d69d7a439b366aec16638d.jpg" alt="Istanbul nightlife" class="animated-img" />
+      <div class="imagetext">
+        <h1>Let’s talk about Istanbul’s nightlife</h1>
+        <p>It’s like this city has a whole different side when the sun goes down. The number of clubs here might make your head spin, and it’s no wonder that the party goes on until sunrise.</p>
+        <p>Now, let’s break down what you can expect in more detail:</p>
+        <ul>
+          <li><strong>Kadikoy:</strong> Explore Moda, Kadikoy market zone, Iskele Street, Bahariye Street, Kadife Street, and Caddebostan Bar Street.</li>
+          <li><strong>Uskudar:</strong> Enjoy local bars and cafes along the Uskudar coast.</li>
+          <li><strong>Sultanahmet:</strong> Enjoy a calm evening with scenic views and visit the laid-back bars around Sultanahmet Square.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="block fade-in">
+      <img src="assets/images/tradition 2/41cd063c9b7ee17711d93495efe3b50c.jpg" alt="Taksim Area" class="animated-img" />
+      <div class="imagetext">
+        <h1>Taksim & Istiklal</h1>
+        <p>The heartbeat of Istanbul’s nightlife! Live music, street performers, and rooftop bars everywhere.</p>
+        <ul>
+          <li>Istiklal Avenue: Music bars and pubs</li>
+          <li>Rooftop lounges with Bosphorus views</li>
+          <li>Neon-lit nightclubs open till dawn</li>
+        </ul>
+      </div>
+    </div>
+
+ 
+    <div class="block fade-in">
+      <img src="assets/images/tradition 2/558835153cc0148294f39d551cc00f4e.jpg" alt="Bosphorus View" class="animated-img" />
+      <div class="imagetext">
+        <h1>Bosphorus Nights</h1>
+        <p>Experience Istanbul from a cruise! Enjoy DJ nights, dinners, and dancing on the water.</p>
+        <ul>
+          <li>Romantic dinner cruises</li>
+          <li>Party boats with DJs</li>
+          <li>Golden views of the city skyline</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.querySelectorAll('.fade-in').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});
+
+
+    window.dispatchEvent(new Event('scroll'));
+
+
+
+</script>
+
+  <footer>
+  <p>© 2025 Turkish Festivals. All rights reserved.</p>
+
+</footer>
+
+
+
+
+
+</body>
+
+</html>

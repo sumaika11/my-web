@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <title>Festival</title>
+
+</head>
+<style>
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #000000, #8B0000);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90vw;
+      max-width: 1200px;
+      gap: 30px;
+    }
+
+    .heading-box {
+      flex: 1;
+      text-align: center;
+      animation: popIn 1.5s ease-out forwards;
+      transform: scale(0);
+      color: #ff0000;
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0); opacity: 0; }
+      50% { transform: scale(1.1); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .heading-box h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 10px #000;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 2px 2px 10px #ff0000;
+      }
+      to {
+        text-shadow: 0 0 20px #ff5555, 0 0 30px #ff0000;
+      }
+    }
+
+    .container {
+      flex: 1;
+      perspective: 1000px;
+    }
+
+    .form-box {
+      width: 100%;
+      max-width: 500px;
+      background: #1c1c1c;
+      color: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+      transform: rotateY(-90deg);
+      animation: rotateIn 1s ease-in-out forwards;
+    }
+
+    @keyframes rotateIn {
+      to {
+        transform: rotateY(0deg);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #ff0000;
+      animation: slideIn 1s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      background: #333;
+      color: white;
+    }
+
+    input:focus, select:focus {
+      outline: 2px solid #ff0000;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: #ff0000;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .heading-box h1 {
+        font-size: 2rem;
+      }
+    }
+
+
+
+.heading-with-button {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  justify-content: center; 
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+
+.heading-with-button h1 {
+  font-size: 3rem;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 10px #ff0000,
+    0 0 20px #ff4444,
+    0 0 30px #ff4444,
+    0 0 40px #ff6666;
+  animation: neonGlow 3s ease-in-out infinite alternate;
+  margin: 0;
+  line-height: 1.2;
+  flex-shrink: 0; 
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff4444,
+      0 0 30px #ff4444,
+      0 0 40px #ff6666;
+    color: #ff3333;
+  }
+  50% {
+    text-shadow:
+      0 0 10px #ff4444,
+      0 0 20px #ff6666,
+      0 0 30px #ff8888,
+      0 0 40px #ff8888,
+      0 0 50px #ffaaaa;
+    color: #ff6666;
+  }
+  100% {
+    text-shadow:
+      0 0 5px #ff0000,
+      0 0 10px #ff0000,
+      0 0 20px #ff4444,
+      0 0 30px #ff4444,
+      0 0 40px #ff6666;
+    color: #ff3333;
+  }
+}
+
+
+.fly-glow-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 12px;
+  background: #760b0b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+  animation: flyGlow 2.5s ease-in-out infinite;
+  box-shadow: 0 0 10px #ff0000;
+  transition: transform 0.3s;
+}
+
+.fly-glow-button:hover {
+  transform: scale(1.15) rotate(3deg);
+  box-shadow:
+    0 0 20px #ff4444,
+    0 0 30px #ff0000,
+    0 0 40px #ff0000,
+    0 0 50px #ff6666;
+}
+
+ @keyframes flyGlow {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    box-shadow: 0 0 10px #ff0000;
+  }
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow:
+      0 0 20px #ff4444,
+      0 0 30px #ff0000,
+      0 0 40px #ff0000;
+  }
+  75% {
+    transform: translateY(-5px) rotate(-3deg);
+    box-shadow:
+      0 0 25px #ff5555,
+      0 0 35px #ff2222,
+      0 0 45px #ff2222;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    box-shadow: 0 0 10px #ff0000;
+  }
+}
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+  <div class="wrapper">
+    <div class="heading-box">
+      <h1>Book Your Reservation<br><small style="font-size: 1.2rem; color: white;">Plan Your Festival Experience Now!</small></h1>
+      <button type="button" class="fly-glow-button" onclick="window.location.href='index.html'">Go to Home</button>
+    </div>
+
+    <div class="container">
+      <div class="form-box">
+        
+        <h2>Book Now</h2>
+        <form id="bookingForm">
+          <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+          <input type="text" id="lastname" name="lastname" placeholder="Last Name" required />
+          <input type="email" id="email" name="email" placeholder="Email" required />
+          <input type="password" id="password" name="password" placeholder="Password" minlength="6" required />
+          
+          <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="Turkey">Turkey</option>
+            <option value="Germany">Germany</option>
+            <option value="USA">USA</option>
+          </select>
+          
+          <select id="payment" name="payment" required>
+            <option value="">Payment Method</option>
+            <option value="credit">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="cash">Cash</option>
+          </select>
+          
+          <select id="festival" name="festival" required>
+            <option value="">Festival Type</option>
+            <option value="gallery">Gallery</option>
+            <option value="origins">Origins</option>
+            <option value="traditional">Traditional</option>
+          </select>
+          
+          <input type="date" id="date" name="date" required />
+          
+          <button type="submit">Submit Reservation</button>
+        </form>
+
+<div class="thank-you-message" style="display:none; text-align:center; color:white; animation: fadeIn 1s ease-in-out;">
+  <h2 style="color: #00ff00;">Thank You!</h2>
+  <p>Your reservation has been successfully submitted.</p>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+ 
+
+
+  <script>
+ 
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+   
+    const fullname = document.getElementById('fullname').value.trim();
+    const lastname = document.getElementById('lastname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    if (!fullname || !lastname || !email || !password) {
+      alert('Please fill out all fields correctly.');
+      return;
+    }
+
+    if (password.length < 6) {
+      alert('Password must be at least 6 characters long.');
+      return;
+    }
+
+
+    document.getElementById('bookingForm').style.display = 'none';
+    document.querySelector('.thank-you-message').style.display = 'block';
+  });
+</script>
+
+ 
+</body>
+</html>
